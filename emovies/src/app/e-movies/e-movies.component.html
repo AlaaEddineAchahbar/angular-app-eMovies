@@ -1,0 +1,24 @@
+<div class="col mb-5">
+  <div class="card h-100">
+      <!-- Movie image-->
+      <img class="card-img-top" [src]="movie.image" [alt]="movie.title"/>
+      <!-- Movie details-->
+      <div class="card-body p-4">
+        <div class="text-center">
+            <!-- Movie Title -->
+            <h5 class="fw-bolder">{{ movie.title }}</h5>
+            <p>{{ movie.year }}</p>
+            <!-- Movie Rating -->
+            <div class="rating">
+                <p><span class="star" *ngFor="let star of stars" [ngClass]="{'filled': star <= movie.rating}">&#9733;</span> {{movie.rating}}</p>
+            </div>
+            <!-- Movie Price -->
+            <h5>{{ movie.price | currency : "EUR" }}</h5>
+        </div>
+      </div>
+      <!-- Movie actions-->
+      <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+          <div class="text-center"><a class="btn btn-lg btn-outline-dark mt-auto" (click)="onViewMovie()">View</a></div>
+      </div>
+  </div>
+</div>

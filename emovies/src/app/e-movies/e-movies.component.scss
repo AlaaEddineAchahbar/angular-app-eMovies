@@ -1,0 +1,13 @@
+.rating {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .star {
+    cursor: pointer;
+    color: #ccc;
+  }
+
+  .star.filled {
+    color: #ffcc00;
+  }
